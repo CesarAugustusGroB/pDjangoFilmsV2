@@ -1,6 +1,7 @@
+import os
 import requests
 
-API_KEY = 'ffb643bf7b157410e8ee164302dd9bd5'
+API_KEY = os.environ.get('TMDB_API_KEY')
 BASE_URL = 'https://api.themoviedb.org/3'
 
 

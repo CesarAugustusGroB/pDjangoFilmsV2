@@ -17,7 +17,7 @@ from models import Film, Genre, FilmAndGenre, Person, FilmRole, FilmsAndPersons,
 
 
 # Configura tu API Key de TMDb
-TMDB_API_KEY = 'ffb643bf7b157410e8ee164302dd9bd5'
+TMDB_API_KEY = os.environ.get('TMDB_API_KEY')
 TMDB_BASE_URL = 'https://api.themoviedb.org/3/'
 
 

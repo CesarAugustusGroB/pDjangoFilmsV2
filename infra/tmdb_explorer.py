@@ -1,9 +1,10 @@
+import os
 '''
 
 import requests
 import json
 
-API_KEY = 'ffb643bf7b157410e8ee164302dd9bd5'  # reemplazá con tu API key real
+API_KEY = os.environ.get('TMDB_API_KEY')  # reemplazá con tu API key real
 BASE_URL = 'https://api.themoviedb.org/3'
 
 # Podés cambiar este ID por cualquier otro
@@ -57,7 +58,7 @@ if __name__ == '__main__':
 import requests
 import json
 
-API_KEY = 'ffb643bf7b157410e8ee164302dd9bd5'  # reemplazá con tu API key real
+API_KEY = os.environ.get('TMDB_API_KEY')  # reemplazá con tu API key real
 BASE_URL = 'https://api.themoviedb.org/3'
 
 # Podés cambiar este ID por cualquier otro
@@ -120,7 +121,7 @@ if __name__ == '__main__':
 import requests
 import json
 
-API_KEY = 'ffb643bf7b157410e8ee164302dd9bd5'
+API_KEY = os.environ.get('TMDB_API_KEY')
 BASE_URL = 'https://api.themoviedb.org/3'
 MOVIE_ID = 27205  # Inception, podés cambiarlo
 
@@ -176,7 +177,7 @@ if __name__ == '__main__':
 import requests
 import json
 
-API_KEY = 'ffb643bf7b157410e8ee164302dd9bd5'  # Usá tu propia API key si cambia
+API_KEY = os.environ.get('TMDB_API_KEY')  # Usá tu propia API key si cambia
 BASE_URL = 'https://api.themoviedb.org/3'
 MOVIE_ID = 27205  # Cambialo si querés otra película
 
@@ -195,7 +196,7 @@ if __name__ == '__main__':
 '''
 import requests
 
-API_KEY = 'ffb643bf7b157410e8ee164302dd9bd5'  # reemplazá con tu API Key real
+API_KEY = os.environ.get('TMDB_API_KEY')  # reemplazá con tu API Key real
 BASE_URL = 'https://api.themoviedb.org/3'
 MOVIE_ID = 27205  # ID de la película, podés cambiarlo
 
@@ -221,7 +222,7 @@ from django.db import IntegrityError
 from models import Film, Genre, FilmAndGenre, Person, FilmRole, FilmsAndPersons, ProductionCompany, FilmAndProductionCompany, Country, FilmAndCountry, Language, FilmAndLanguage
 
 # Configura tu API Key de TMDb
-TMDB_API_KEY = 'ffb643bf7b157410e8ee164302dd9bd5'
+TMDB_API_KEY = os.environ.get('TMDB_API_KEY')
 TMDB_BASE_URL = 'https://api.themoviedb.org/3/'
 
 

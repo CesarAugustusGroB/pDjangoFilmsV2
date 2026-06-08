@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-3o9s_tc4$(k-nl0nv^p+b2x)kna02x@h5&em&lm)w)e(4vu+p%'
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-dev-only-change-me')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -261,7 +261,7 @@ LOGGING = {
 '''
 
 # KEYS
-STRIPE_SECRET_KEY = "sk_test_51QuZCQPdMh0chZHFYp8nRrBRKEYncGoaNefqfKSqKprIdP6pKYa26SqW5g8zqivZwQKrBZdK4NsYL09VzOxrp7ND00u6cY2GL1"
-STRIPE_PUBLIC_KEY = "pk_test_51QuZCQPdMh0chZHFFpXhHCl8rOd0YxGljroiPsVZAvIFPTUdfvBrfPqfKm6vhM8PT8gf9lZEMnhCBXwiP5QJJLjd00oNtsMMxS"
-STRIPE_WEBHOOK_SECRET = "whsec_10229ca2e350c85ee83bb1c9440526a6c3d248d36090909ed72a79d5ecc81513"
+STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY')
+STRIPE_PUBLIC_KEY = os.environ.get('STRIPE_PUBLIC_KEY')
+STRIPE_WEBHOOK_SECRET = os.environ.get('STRIPE_WEBHOOK_SECRET')
 
