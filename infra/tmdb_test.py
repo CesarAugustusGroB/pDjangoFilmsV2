@@ -1,9 +1,10 @@
+import os
 import requests
 import json
 import time
 
 # Your TMDb API Key
-API_KEY = 'ffb643bf7b157410e8ee164302dd9bd5'
+API_KEY = os.environ.get('TMDB_API_KEY')
 
 
 def search_movies(title):

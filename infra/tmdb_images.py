@@ -1,7 +1,8 @@
+import os
 import requests
 import json
 
-API_KEY = 'ffb643bf7b157410e8ee164302dd9bd5'  # Reemplaza con tu API key real
+API_KEY = os.environ.get('TMDB_API_KEY')  # Reemplaza con tu API key real
 BASE_URL = 'https://api.themoviedb.org/3'
 
 # ID de la película que quieres consultar, puedes cambiar este valor
